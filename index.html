@@ -1,105 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ESSARKAY | Construction · Consulting · Finance</title>
   <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      color: #222;
-      background-color: #fff;
-      scroll-behavior: smooth;
+    :root{
+      --brand:#0a4e96; /* ESSARKAY blue */
+      --text:#222;
+      --muted:#666;
+      --bg:#fff;
     }
-
-    header {
-      background: #0a4e96;
-      color: white;
-      padding: 15px 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+    *{box-sizing:border-box}
+    html,body{margin:0;font-family:Segoe UI,Arial,sans-serif;color:var(--text);background:var(--bg);scroll-behavior:smooth}
+    header{position:sticky;top:0;z-index:10;background:var(--brand);color:#fff}
+    nav{max-width:1100px;margin:0 auto;display:flex;gap:20px;justify-content:center;flex-wrap:wrap;padding:14px}
+    nav a{color:#fff;text-decoration:none;font-weight:600}
+    nav a:hover{text-decoration:underline}
+    section{max-width:1100px;margin:0 auto;padding:56px 18px}
+    .hero{padding:110px 18px;color:#fff;text-align:center;
+      background: linear-gradient(135deg, #0a4e96 0%, #2a6fbe 60%, #6aa2e7 100%);
     }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .hero {
-      background: url('images/hero-bg.jpg') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 120px 20px;
-    }
-
-    .hero h1 {
-      font-size: 2.8em;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 1.2em;
-      margin-top: 0;
-    }
-
-    h2 {
-      color: #0a4e96;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .section-content {
-      line-height: 1.6;
-      font-size: 1.05em;
-      text-align: justify;
-    }
-
-    footer {
-      background: #0a4e96;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-      font-size: 0.95em;
-    }
-
-    footer a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2em; }
-      nav { gap: 10px; }
-    }
+    .hero h1{font-size:2.6rem;margin:0 0 8px}
+    .hero p{margin:6px 0;font-size:1.15rem}
+    h2{color:var(--brand);text-align:center;margin:0 0 22px}
+    .section-content{line-height:1.6;font-size:1.05rem}
+    .section-content ul{padding-left:18px}
+    footer{background:var(--brand);color:#fff;text-align:center;padding:24px 12px;font-size:.95rem;margin-top:32px}
+    /* Simple container img utility (for the logo if present) */
+    .logo{display:block;margin:0 auto 12px auto;max-width:200px;height:auto}
+    @media(max-width:768px){.hero h1{font-size:2rem}}
   </style>
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Top Nav -->
   <header>
     <nav>
       <a href="#home">Home</a>
@@ -113,12 +48,10 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero" style="background: url('img/Online-Education-Website-Template.jpg') center/cover no-repeat; color: white; text-align: center; padding: 120px 20px;">
-
+  <!-- Hero -->
   <section id="home" class="hero">
-    <img src="img/logo.png" alt="ESSARKAY Logo" style="width:180px;margin-bottom:15px;">
-
+    <!-- If your logo file exists at IMG/logo.png (note UPPERCASE folder), uncomment the next line -->
+    <!-- <img class="logo" src="IMG/logo.png" alt="ESSARKAY Logo"> -->
     <h1>ESSARKAY</h1>
     <p>Construction · Consulting · Finance</p>
     <p><em>Growing Together, By Client Value Creation</em></p>
@@ -128,14 +61,12 @@
   <section id="services">
     <h2>Services</h2>
     <div class="section-content">
-      <p>ESSARKAY offers end-to-end construction and financial services under one platform.
-      From project planning and design to financing and execution, our team ensures seamless integration,
-      transparency, and on-time delivery.</p>
+      <p>ESSARKAY offers end-to-end construction and financial services under one platform, integrating planning, design, financing and execution with transparency and on-time delivery.</p>
       <ul>
-        <li>Plot and Home Loan Processing for salaried and business owners</li>
-        <li>Loans for Home and Commercial Construction</li>
+        <li>Plot & Home Loan Processing (salaried / business owners)</li>
+        <li>Loans for Home & Commercial Construction</li>
         <li>Financial assistance for Rooftop Solar Solutions</li>
-        <li>Mortgage Loans and Project Feasibility Consulting</li>
+        <li>Mortgage Loans & Project Feasibility Consulting</li>
       </ul>
     </div>
   </section>
@@ -144,14 +75,12 @@
   <section id="products">
     <h2>Products</h2>
     <div class="section-content">
-      <p>Our product division sources and supplies quality materials for the construction industry. 
-      We have partnered with top vendors to ensure availability, reliability, and competitive pricing.</p>
       <ul>
         <li>Rebars, Sand, Aggregates, Cement, Bricks, AAC Blocks</li>
-        <li>Bathroom Accessories, Plumbing and Sanitary Materials</li>
-        <li>Electrical and Lighting Products</li>
-        <li>Steel, Glass, Aluminum, Wood, and Plywood</li>
-        <li>Rooftop Solar Panels, Flooring and Tiles</li>
+        <li>Bathroom Accessories, Plumbing & Sanitary</li>
+        <li>Electrical & Lighting</li>
+        <li>Steel, Glass, Aluminum, Wood & Plywood</li>
+        <li>Rooftop Solar Panels, Flooring & Tiles</li>
       </ul>
     </div>
   </section>
@@ -160,11 +89,7 @@
   <section id="vendors">
     <h2>Vendors</h2>
     <div class="section-content">
-      <p>We collaborate with multiple vendors across various product categories. 
-      Our vendor network allows us to provide clients with the best materials at optimal pricing,
-      ensuring consistent quality and reliable supply chains.</p>
-      <p>Through our vendor onboarding system, we bring together verified suppliers, manufacturers,
-      and service providers on a single transparent platform.</p>
+      <p>We collaborate with verified suppliers and manufacturers across categories to ensure quality, availability and competitive pricing. Our onboarding process keeps the platform transparent and reliable.</p>
     </div>
   </section>
 
@@ -172,17 +97,14 @@
   <section id="consulting">
     <h2>Consulting</h2>
     <div class="section-content">
-      <p>ESSARKAY Consulting focuses on bridging the employability gap and supporting MSMEs through strategic manpower,
-      education, and business consulting services.</p>
+      <p>ESSARKAY Consulting focuses on bridging employability and enabling MSME growth through training, staffing and business advisory.</p>
       <ul>
-        <li>Education, Upskilling, Training and Development Programs</li>
-        <li>Staffing Solutions — On-site and Off-site Deployed Manpower</li>
-        <li>Contractual Staffing for Skilled and Semi-Skilled Workforce</li>
-        <li>MSME Consulting and Business Growth Advisory</li>
-        <li>IT Infrastructure and HR Outsourcing Support</li>
-        <li>Financial and Marketing Consulting for Small Enterprises</li>
+        <li>Education, Upskilling, Training & Development</li>
+        <li>On-site & Off-site Deployed Manpower (contractual / on-roll)</li>
+        <li>Staffing for Skilled, Semi-Skilled & Fresh Graduates</li>
+        <li>MSME Consulting, IT Infrastructure & HR Outsourcing</li>
+        <li>Financial & Marketing Consulting for SMEs</li>
       </ul>
-      <p>We empower clients to focus on their core business while we manage workforce, process, and consulting needs.</p>
     </div>
   </section>
 
@@ -190,19 +112,17 @@
   <section id="team">
     <h2>Our Team</h2>
     <div class="section-content">
-      <p>We are a growing team of specialized Architects, Civil and Structural Engineers,
-      Financial Consultants, and Marketing Professionals. Our combined expertise helps
-      translate ESSARKAY’s vision into measurable results for our clients.</p>
+      <p>A team of specialized Architects, Civil & Structural Engineers, Financial Consultants and Marketing Professionals translating ESSARKAY’s vision into measurable client value.</p>
     </div>
   </section>
 
-  <!-- About Us -->
+  <!-- About -->
   <section id="about">
     <h2>About Us</h2>
     <div class="section-content">
-      <p><strong>Vision:</strong> To be a value-driven Indian organization of high standards, not just meeting but delighting customers through expertise, technology, and innovation.</p>
-      <p><strong>Mission:</strong> To grow consistently by providing value-added and customer-specific solutions while nurturing internal talent and vendor relationships.</p>
-      <p><strong>Values:</strong> Customer-first approach, good governance, transparency, confidentiality, and technology-driven systems that set us apart from others.</p>
+      <p><strong>Vision:</strong> To be a value-driven Indian organization of high standards, delighting customers through expertise, technology and innovation.</p>
+      <p><strong>Mission:</strong> To grow consistently by providing value-added, customer-specific solutions while nurturing internal talent and vendor partnerships.</p>
+      <p><strong>Values:</strong> Customer-first, good governance, transparency, confidentiality and technology-driven systems.</p>
     </div>
   </section>
 
@@ -210,17 +130,15 @@
   <section id="login">
     <h2>Vendor Login</h2>
     <div class="section-content">
-      <p>Registered vendors can access our partner portal to update project details, submit quotations,
-      and track progress. New vendors may contact our team for onboarding assistance.</p>
-      <p><em>Vendor login portal under development.</em></p>
+      <p>Registered vendors can access our partner portal to update details and track progress. New vendors can contact us for onboarding.</p>
+      <p><em>Portal under development.</em></p>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
     <p><strong>ESSARKAY LLP</strong></p>
-    <p>Phone: +91 861 840 5505<br>
-    Email: CEO.desk@essarkay.in | Teams.desk@essarkay.in</p>
+    <p>Phone: +91 861 840 5505 · Email: CEO.desk@essarkay.in | Teams.desk@essarkay.in</p>
     <p>Bengaluru, India</p>
     <p>&copy; 2025 ESSARKAY · Construction · Consulting · Finance</p>
   </footer>
